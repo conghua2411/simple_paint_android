@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">simple_paint</string>
+    <string name="btn_line">Line</string>
+    <string name="btn_triangle">triangle</string>
+    <string name="btn_rectangle">rectangle</string>
+    <string name="btn_star">star</string>
+    <string name="btn_undo">undo</string>
+    <string name="btn_redo">redo</string>
+</resources>

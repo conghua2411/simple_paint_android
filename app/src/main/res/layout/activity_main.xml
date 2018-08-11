@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_line" />
+
+    <Button
+        android:id="@+id/btn_triangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_triangle"
+        android:layout_toRightOf="@+id/btn_line" />
+
+    <Button
+        android:id="@+id/btn_rectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_rectangle"
+        android:layout_toRightOf="@+id/btn_triangle" />
+
+    <Button
+        android:id="@+id/btn_undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_undo"
+        android:layout_below="@+id/btn_line"/>
+
+    <Button
+        android:id="@+id/btn_redo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_redo"
+        android:layout_below="@+id/btn_line"
+        android:layout_toRightOf="@+id/btn_undo"/>
+
+    <com.conghua2411.hoangcong.simple_paint.simple_paint.custom_view.simple_paint
+        android:id="@+id/simple_paint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_undo"/>
+</RelativeLayout>
