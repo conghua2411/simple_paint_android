@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:id="@+id/view_color"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tv_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RED"
+        android:layout_below="@+id/view_color"/>
+
+    <SeekBar
+        android:id="@+id/seekbar_red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="0"
+        android:layout_below="@+id/tv_red"/>
+
+    <TextView
+        android:id="@+id/tv_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GREEN"
+        android:layout_below="@+id/seekbar_red"/>
+
+    <SeekBar
+        android:id="@+id/seekbar_green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="0"
+        android:layout_below="@+id/tv_green"/>
+
+    <TextView
+        android:id="@+id/tv_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BLUE"
+        android:layout_below="@+id/seekbar_green"/>
+
+    <SeekBar
+        android:id="@+id/seekbar_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="0"
+        android:layout_below="@id/tv_blue"/>
+
+    <Button
+        android:id="@+id/btn_OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_below="@+id/seekbar_blue"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_below="@+id/seekbar_blue"
+        android:layout_toLeftOf="@+id/btn_OK"/>
+
+
+</RelativeLayout>

@@ -32,6 +32,11 @@ public class ListDrawObject {
         listUndo.remove(listUndo.size() - 1);
     }
 
+    public void clear() {
+        listDraw.clear();
+        listUndo.clear();
+    }
+
     public void addObject(drawObject obj) {
         listUndo.clear();
         listDraw.add(obj);

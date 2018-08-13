@@ -64,6 +64,11 @@ public class simple_paint extends View {
         }
     }
 
+    public void clear() {
+        list.clear();
+        postInvalidate();
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.drawColor(Color.WHITE);

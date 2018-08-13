@@ -17,14 +17,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_triangle"
-        android:layout_toRightOf="@+id/btn_line" />
+        android:layout_toRightOf="@+id/btn_line"
+        android:layout_toEndOf="@+id/btn_line"/>
 
     <Button
         android:id="@+id/btn_rectangle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_rectangle"
-        android:layout_toRightOf="@+id/btn_triangle" />
+        android:layout_toRightOf="@+id/btn_triangle"
+        android:layout_toEndOf="@+id/btn_triangle"/>
 
     <Button
         android:id="@+id/btn_undo"
@@ -39,7 +41,26 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_redo"
         android:layout_below="@+id/btn_line"
-        android:layout_toRightOf="@+id/btn_undo"/>
+        android:layout_toRightOf="@+id/btn_undo"
+        android:layout_toEndOf="@+id/btn_undo"/>
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_clear"
+        android:layout_below="@id/btn_line"
+        android:layout_toRightOf="@id/btn_redo"
+        android:layout_toEndOf="@+id/btn_redo"/>
+
+    <Button
+        android:id="@+id/btn_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_color_picker"
+        android:layout_below="@+id/btn_line"
+        android:layout_toRightOf="@id/btn_clear"
+        android:layout_toEndOf="@+id/btn_clear"/>
 
     <com.conghua2411.hoangcong.simple_paint.simple_paint.custom_view.simple_paint
         android:id="@+id/simple_paint"

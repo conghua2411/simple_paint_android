@@ -6,4 +6,6 @@
     <string name="btn_star">star</string>
     <string name="btn_undo">undo</string>
     <string name="btn_redo">redo</string>
+    <string name="btn_clear">clear</string>
+    <string name="btn_color_picker">color</string>
 </resources>
