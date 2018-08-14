@@ -80,6 +80,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        colorPicker.setOnOkEventListener(new dialog_color_picker.OnOkEventListener() {
+            @Override
+            public void okClick(int red, int green, int blue) {
+                simplePaint.changePaintColor(red,green,blue);
+            }
+        });
     }
 
     private void init() {
@@ -103,4 +109,5 @@ public class MainActivity extends AppCompatActivity {
         btnTriangle.setEnabled(Triangle);
         btnRectangle.setEnabled(Rectangle);
     }
+
 }

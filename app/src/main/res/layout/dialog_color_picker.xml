@@ -16,23 +16,39 @@
         android:id="@+id/tv_red"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RED"
+        android:text="RED : "
         android:layout_below="@+id/view_color"/>
+
+    <TextView
+        android:id="@+id/tv_red_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_color"
+        android:layout_toRightOf="@+id/tv_red"
+        android:layout_toEndOf="@+id/tv_red"/>
 
     <SeekBar
         android:id="@+id/seekbar_red"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:max="255"
-        android:progress="0"
+        android:progress="255"
         android:layout_below="@+id/tv_red"/>
 
     <TextView
         android:id="@+id/tv_green"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GREEN"
+        android:text="GREEN : "
         android:layout_below="@+id/seekbar_red"/>
+
+    <TextView
+        android:id="@+id/tv_green_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar_red"
+        android:layout_toRightOf="@+id/tv_green"
+        android:layout_toEndOf="@+id/tv_green"/>
 
     <SeekBar
         android:id="@+id/seekbar_green"
@@ -46,8 +62,16 @@
         android:id="@+id/tv_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BLUE"
+        android:text="BLUE : "
         android:layout_below="@+id/seekbar_green"/>
+
+    <TextView
+        android:id="@+id/tv_blue_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekbar_green"
+        android:layout_toRightOf="@+id/tv_blue"
+        android:layout_toEndOf="@+id/tv_blue"/>
 
     <SeekBar
         android:id="@+id/seekbar_blue"

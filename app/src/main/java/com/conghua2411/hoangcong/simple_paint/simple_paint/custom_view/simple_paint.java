@@ -14,6 +14,9 @@ public class simple_paint extends View {
     private ListDrawObject list;
     private Paint mPaint;
     private String mType;
+
+    private Integer mPaintColor;
+
     public simple_paint(Context context) {
         super(context);
         init();
@@ -41,10 +44,9 @@ public class simple_paint extends View {
         list = new ListDrawObject();
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setColor(Color.RED);
+        mPaintColor = Color.RED;
+        mPaint.setStrokeWidth(8);
     }
-
-    private float x = 0;
-    private float y = 0;
 
     public void changeType(String type) {
         mType = type;
@@ -69,6 +71,10 @@ public class simple_paint extends View {
         postInvalidate();
     }
 
+    public void changePaintColor(int red, int green, int blue) {
+        mPaintColor = Color.rgb(red,green,blue);
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.drawColor(Color.WHITE);
@@ -81,13 +87,11 @@ public class simple_paint extends View {
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: {
-                x = event.getX();
-                y = event.getY();
 
                 drawObj = new drawObject();
                 drawObj.setType(mType);
-
-                drawObj.addLast(new PointFloat(x,y));
+                drawObj.setColor(mPaintColor);
+                drawObj.addLast(new PointFloat(event.getX(), event.getY()));
 
                 list.addObject(drawObj);
 
@@ -96,18 +100,14 @@ public class simple_paint extends View {
                 return true;
             }
             case MotionEvent.ACTION_MOVE: {
-                x = event.getX();
-                y = event.getY();
 
-                list.addPointToLast(new PointFloat(x,y));
+                list.addPointToLast(new PointFloat(event.getX(), event.getY()));
 
                 postInvalidate();
 
                 return true;
             }
             case MotionEvent.ACTION_UP: {
-                x = event.getX();
-                y = event.getY();
 
                 return true;
             }

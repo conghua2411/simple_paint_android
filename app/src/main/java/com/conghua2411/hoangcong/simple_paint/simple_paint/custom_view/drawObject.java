@@ -1,6 +1,7 @@
 package com.conghua2411.hoangcong.simple_paint.simple_paint.custom_view;
 
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
@@ -11,11 +12,13 @@ import java.util.ArrayList;
 public class drawObject {
     private ArrayList<PointFloat> list;
     private String type;
+    private Integer color;
 
 
     public drawObject() {
         list = new ArrayList<PointFloat>();
         type = "";
+        color = Color.rgb(255,0,0);
     }
 
     public drawObject( ArrayList<PointFloat> List, String sType) {
@@ -39,6 +42,14 @@ public class drawObject {
         if(x > list.size())
             return null;
         return list.get(x);
+    }
+
+    public void setColor(Integer color) {
+        this.color = color;
+    }
+
+    public Integer getColor() {
+        return color;
     }
 
     private void drawTriangle(Canvas canvas, Paint paint, PointFloat begin, PointFloat end) {
@@ -82,6 +93,8 @@ public class drawObject {
     public void drawObject(Canvas canvas, Paint paint) {
         if(canvas == null || paint == null)
             return;
+
+        paint.setColor(color);
 
         if(type != "") {
             if(type.equals("line")) {
